@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student"
+		class="com.bridgelaz.dependencyInjection.Student">
+		<!-- This inject the value using constructor -->
+		<constructor-arg type="String" value="Tanvi Surve"></constructor-arg>
+		<constructor-arg name="marksInAllSubject" value="100"></constructor-arg>
+		<!-- This inject the value using setter method -->
+		<property name="name" value="Tejashree Surve"></property>
+		<property name="marksInAllSubject" value="80"></property>
+	</bean>
+</beans>

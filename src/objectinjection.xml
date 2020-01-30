@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="salary" class="com.bridgelabz.dependencyInjectionObject.SalaryStatus"></bean>
+	<bean id="employee"
+		class="com.bridgelabz.dependencyInjectionObject.Employee">
+		<property name="empid" value="101 "></property>
+		<property name="status" ref="salary"></property>
+		<!-- <property name="status">
+		This bean is inner bean passing the value of salaryStatus reference using inner bean
+			<bean class="com.bridgelabz.dependencyInjectionObject.SalaryStatus"></bean>
+		</property> -->
+	</bean>
+<bean id="otherEmployee"
+		class="com.bridgelabz.dependencyInjectionObject.OtherEmployee">
+		<property name="monthStatus" ref="salary"></property>
+	</bean>
+
+
+</beans>
