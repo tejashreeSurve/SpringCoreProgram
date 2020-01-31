@@ -12,5 +12,10 @@
 	<classpathentry kind="lib" path="/home/admin1/spring-beans-5.2.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/home/admin1/spring-web-5.2.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/home/admin1/spring-expression-5.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/aspectjweaver-1.9.5.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/aspectjrt-1.9.5.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/org.springframework.jdbc-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/spring-dao-2.0.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

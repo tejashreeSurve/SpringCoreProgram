@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+       http://www.springframework.org/schema/beans/spring-beans.xsd   
+       http://www.springframework.org/schema/aop   
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<!-- First Create the Bean of every class -->
+	<bean id="blogic"
+		class="com.bridgelabz.springaopxml.BusinessLogic"></bean>
+	<bean id="elogic" class="com.bridgelabz.springaopxml.ExtraLogic"></bean>
+	<!-- Configure AOP -->
+	<aop:config>
+	<!-- Define Aspect Annotation like in java to reference of class ExtraLogic -->
+		<aop:aspect id="aspect" ref="elogic">
+		<!-- In expression provide the path of method for which we need to check -->
+			<aop:pointcut
+				expression="execution(void com.bridgelabz.springaopxml.BusinessLogic.Logic2())"
+				id="pointofreference" />
+			<!-- JoinPoint where pass the method to execute with pointcut reference -->
+			<aop:before method="Log" pointcut-ref="pointofreference" />
+		</aop:aspect>
+	</aop:config>
+</beans>
