@@ -4,7 +4,10 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans   
 http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean  id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<!-- this bean create the object of Driver Manager and set all the properties 
+		of the driver and DataBase -->
+	<bean id="ds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver"></property>
 		<property name="url"
@@ -12,12 +15,16 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 		<property name="username" value="root"></property>
 		<property name="password" value="root"></property>
 	</bean>
+	<!-- This bean create the object of jdbc Template set the object of driverClass 
+		using ref element -->
 	<bean id="jdbcTemplate"
 		class="org.springframework.jdbc.core.JdbcTemplate">
-		<property name="databaseConnection" ref="dataSource"></property>
+		<property name="dataSource" ref="ds"></property>
 	</bean>
+	<!-- This bean create the object of DatabaseQuery class and set the object 
+		of jdbcTemplate using ref element -->
 	<bean id="candidatedb"
 		class="com.bridgelabz.springjdbc.DatabaseQuery">
-		<property name="dbconnection" ref="jdbcTemplate"></property>
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
 </beans>  

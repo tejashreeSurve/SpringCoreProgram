@@ -1,4 +1,4 @@
-package com.bridgelabz.springjdbc;
+package com.bridgelabz.springjdbcpreparedStatement;
 
 // This class is simple pojo class
 public class Candidate {

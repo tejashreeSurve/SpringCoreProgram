@@ -24,7 +24,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- This bean create the object of DatabaseQuery class and set the object 
 		of jdbcTemplate using ref element -->
 	<bean id="candidatedb"
-		class="com.bridgelabz.springjdbc.DatabaseQuery">
+		class="com.bridgelabz.springjdbcpreparedStatement.DatabaseQuery">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
 </beans>  
