@@ -11,7 +11,7 @@ public class jdbcDemo {
 		DatabaseQuery object = context.getBean("candidatedb", DatabaseQuery.class);
 		
 		// This query insert record in table
-		object.insert(new Candidate(5, "anna", "elect", "vjti"));
+		object.insert(new Candidate(7, "anna", "elect", "vjti"));
 		System.out.println("Successfully added the records ");
 
 		// This query delete record from table
