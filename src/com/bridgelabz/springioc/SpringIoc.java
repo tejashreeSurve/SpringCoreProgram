@@ -9,7 +9,7 @@ public class SpringIoc {
 		@SuppressWarnings("resource")
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("CarsBeans.xml");
-		Cars carObj = context.getBean("car1", Cars.class);
+		Cars carObj = context.getBean("car", Cars.class);
 		carObj.modelName();
 		carObj.modelColour();
 	}

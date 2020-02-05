@@ -13,12 +13,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class CustomerDAOImp  {
  private DataSource dataSource;
 
-	public void create(Customer customer) throws RuntimeException,SQLDataException{
+	public void create(Customer customer) throws RuntimeException,ClassNotFoundException,SQLDataException{
 		System.out.println("hello");
 		String queryCustomer="insert into customer values(?,?)";
 		String queryAddress="insert into address values(?,?,?)";
 		JdbcTemplate jdbcTemplate= new JdbcTemplate(dataSource);
 		System.out.println("hi");
+		try {
+			System.out.println("i m in try");
 		jdbcTemplate.update(queryCustomer, new Object[] {
 				customer.getId(),customer.getName()
 			
@@ -29,10 +31,10 @@ public class CustomerDAOImp  {
 				customer.getAddress().getCountry()
 		});
 		System.out.println("inserted into customer table successfully");
-
+		}catch(Exception e) {
 		
 			System.out.println("Error in inserting the data");
-	
+		}
 		
 		
 	

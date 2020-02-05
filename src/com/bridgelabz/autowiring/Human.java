@@ -4,6 +4,8 @@ public class Human {
 	private Heart heart;
 
 	// to autowire using constructor 
+	// it can be done by by-name and by-type
+	 public Human() {} //if we remove this non-argument constructor then error come  
 	public Human(Heart heart) {
 		this.heart = heart;
 	}

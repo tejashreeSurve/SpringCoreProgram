@@ -4,10 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<bean id="heart" class="com.bridgelabz.autowiring.Heart"></bean>
-	<!-- here the spring inject dependency automaticaly without writing extra 
+	<!-- here the spring inject dependency automatically without writing extra 
 		code -->
 	<!-- autowire does this easy where byName match the bean name with reference 
 		vale for creating object -->
 	<bean id="human" class="com.bridgelabz.autowiring.Human"
-		autowire="constructor"></bean>
+		autowire="constructor">
+		</bean>
 </beans>

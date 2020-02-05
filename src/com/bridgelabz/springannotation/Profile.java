@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 public class Profile {
 	@Autowired // @autowired is use to create compulsory bean
-	@Qualifier("student2") // Here we can specify which id should call to avoid confusion
+	@Qualifier("student1") // Here we can specify which id should call to avoid confusion
 	private Student student;
 
 	public void setStudent(Student student) {

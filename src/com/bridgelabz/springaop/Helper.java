@@ -7,6 +7,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
 // This class contain the extra method that need to be done
+// advice :- @Before : this says what to execute before and after 
+// point-cut:-  @Before(execution(method path)) :  this says after which method it should execute
 @Component
 @Aspect
 @EnableAspectJAutoProxy

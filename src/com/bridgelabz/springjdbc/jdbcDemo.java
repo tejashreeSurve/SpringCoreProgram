@@ -11,18 +11,18 @@ public class jdbcDemo {
 		DatabaseQuery object = context.getBean("candidatedb", DatabaseQuery.class);
 		
 		// This query insert record in table
-		object.insert(new Candidate(7, "anna", "elect", "vjti"));
+		object.insert(new Candidate(9, "anna", "elect", "vjti"));
 		System.out.println("Successfully added the records ");
 
 		// This query delete record from table
-		Candidate candidate = new Candidate();
+		/*Candidate candidate = new Candidate();
 		candidate.setId(6);
 		object.delete(candidate);
 		System.out.println("1 record is been deleted ");
 		
 		// This query update the record
 		object.update(new Candidate(4, "reshma", "civil", "vjti"));
-		System.out.println("1 record is update successfully");
+		System.out.println("1 record is update successfully");*/
 		 
 	}
 }

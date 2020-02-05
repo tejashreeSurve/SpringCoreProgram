@@ -1,4 +1,4 @@
-package com.bridgelabz.springaop;
+ package com.bridgelabz.springaop;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
